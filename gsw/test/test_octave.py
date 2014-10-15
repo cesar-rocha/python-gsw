@@ -28,10 +28,8 @@ from oct2py import Oct2PyError
 
 import gsw
 
-try:
-    path = sys.argv[1]
-except IndexError:
-    path = "gsw_matlab_v3_04"
+rootpath = os.path.dirname(__file__)
+path = os.path.join(rootpath, "gsw_matlab_v3_04")
 
 
 # We have to supply a fake superiorfloat function for octave.
